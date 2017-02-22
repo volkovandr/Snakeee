@@ -13,8 +13,8 @@ from exceptions import GameOver
 class Snake:
 
     dead = 0
-    default_speed = 7
-    default_length = 2
+    default_speed = 3
+    default_length = 10
 
     UP, DOWN, LEFT, RIGHT = 'UP', 'DOWN', 'LEFT', 'RIGHT'
     deltas = {
@@ -89,6 +89,12 @@ class Snake:
         return len(self.segments)
 
     def set_direction(self, direction):
+        if len(self.direction_stack) == 0:
+            if ((self.direction == Snake.UP and direction == Snake.DOWN) or
+                (self.direction == Snake.DOWN and direction == Snake.UP) or
+                (self.direction == Snake.RIGHT and direction == Snake.LEFT) or
+                (self.direction == Snake.LEFT and direction == Snake.RIGHT)):
+                return
         self.direction_stack.append(direction)
         # print("Added new direction to the stack:", direction)
 

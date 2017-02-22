@@ -21,14 +21,14 @@ def main():
 
     clock = pygame.time.Clock()
 
-    grid = Grid(width=50, height=30)
+    grid = Grid(width=20, height=20)
     graph.window_width = grid.width * graph.grid_size
     graph.window_height = grid.height * graph.grid_size
 
     robo_snakes = [Snake.random_robot_snake(grid, graph.SILVER)
                    for x in range(2)]
     for snake in robo_snakes:
-        snake.speed = 5
+        snake.speed = 3
     homo_snake = Snake.random_snake(grid, graph.GREEN)
 
     food = Food.random_food(grid)
@@ -56,7 +56,7 @@ def main():
                 if robo_snakes[i].dead:
                     del robo_snakes[i]
                     snake = Snake.random_robot_snake(grid, graph.SILVER)
-                    snake.speed = 5
+                    snake.speed = 3
                     robo_snakes.append(snake)
             if homo_snake.dead:
                 homo_snake = Snake.random_snake(grid, graph.GREEN)

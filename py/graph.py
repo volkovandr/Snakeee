@@ -5,8 +5,8 @@ from snake import Snake
 window_height = 800
 window_width = 1400
 
-grid_size = 15
-segment_radius = 9
+grid_size = 25
+segment_radius = 20
 
 secreen = None
 
@@ -43,7 +43,7 @@ def draw_snake(snake, frame_position):
 
     def draw_tail(circle_position, direction, snake_color, segment_radius):
         pygame.draw.circle(screen, snake_color, circle_position,
-                           int(segment_radius * 0.9), 0)
+                           segment_radius, 0)
         pygame.draw.line(
             screen, RED,
             (circle_position[0] - 3 * Snake.deltas[direction][0],
