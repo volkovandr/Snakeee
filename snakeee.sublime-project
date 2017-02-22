@@ -1,0 +1,23 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"C:\\Users\\Andrey\\Documents\\programing\\Snakeee\\venv\\Scripts\\python.EXE\" -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"python_interpreter": "C:\\Users\\Andrey\\Documents\\programing\\Snakeee\\venv\\Scripts\\python.EXE",
+		"rulers": [80],
+		"trim_trailing_white_space_on_save": true
+	}
+}
