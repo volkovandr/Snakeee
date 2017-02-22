@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"start",
+				"start_x"
+			],
+			[
+				"start_",
+				"start_y\tparam"
+			],
+			[
+				"he",
+				"head_y\tstatement"
+			],
+			[
+				"hea",
+				"head_x\tstatement"
+			],
+			[
+				"sta",
+				"start_x\tparam"
+			],
+			[
+				"star",
+				"start_y\tparam"
+			],
+			[
+				"sear",
+				"search_cells\tstatement"
+			],
+			[
+				"end",
+				"end_y\tparam"
+			],
+			[
+				"bu",
+				"build_path\tfunction"
+			],
+			[
+				"nex",
+				"next_search_cells\tstatement"
+			],
+			[
+				"search",
+				"search_cell"
+			],
+			[
+				"d",
+				"deepcopy\tfunction"
+			],
+			[
+				"def",
+				"default_length\tstatement"
+			],
+			[
+				"obje",
+				"object_at_new_head\tstatement"
+			],
+			[
+				"ran",
+				"random_snake\tfunction"
+			],
+			[
 				"obj",
 				"object_at_new_head\tstatement"
 			],
@@ -24,20 +84,12 @@
 				"random_food\tfunction"
 			],
 			[
-				"ran",
-				"random_food\tfunction"
-			],
-			[
 				"cir",
 				"circle_position"
 			],
 			[
 				"direc",
 				"direction\tparam"
-			],
-			[
-				"he",
-				"head_y\tstatement"
 			],
 			[
 				"dr",
@@ -62,10 +114,6 @@
 			[
 				"snake",
 				"snake_color\tstatement"
-			],
-			[
-				"hea",
-				"head_y\tstatement"
 			],
 			[
 				"gri",
@@ -190,10 +238,6 @@
 			[
 				"sea",
 				"search_process\tfunction"
-			],
-			[
-				"start",
-				"start_http_server\tfunction"
 			],
 			[
 				"st",
@@ -371,7 +415,7 @@
 			"file": "py/snakeee.py",
 			"settings":
 			{
-				"buffer_size": 1440,
+				"buffer_size": 1792,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -380,7 +424,7 @@
 			"file": "py/grid.py",
 			"settings":
 			{
-				"buffer_size": 1348,
+				"buffer_size": 2422,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -389,7 +433,7 @@
 			"file": "py/food.py",
 			"settings":
 			{
-				"buffer_size": 474,
+				"buffer_size": 644,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -398,16 +442,24 @@
 			"file": "py/snake.py",
 			"settings":
 			{
-				"buffer_size": 2811,
+				"buffer_size": 8506,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 520,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "py/graph.py",
 			"settings":
 			{
-				"buffer_size": 2237,
+				"buffer_size": 2351,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -456,10 +508,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 277.0,
-		"last_filter": "package control insta",
+		"height": 326.0,
+		"last_filter": "git push",
 		"selected_items":
 		[
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
 			[
 				"package control insta",
 				"Package Control: Install Package"
@@ -467,10 +531,6 @@
 			[
 				"gti commit",
 				"Git: Commit"
-			],
-			[
-				"git add",
-				"Git: Add Current File"
 			],
 			[
 				"git status",
@@ -483,10 +543,6 @@
 			[
 				"git sta",
 				"Git: Status"
-			],
-			[
-				"git push",
-				"Git: Push"
 			],
 			[
 				"",
@@ -565,10 +621,6 @@
 				"Anaconda: Autoformat PEP8 Errors"
 			],
 			[
-				"git commi",
-				"Git: Commit"
-			],
-			[
 				"git add a",
 				"Git: Add All"
 			],
@@ -597,7 +649,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 949.0
+		"width": 968.0
 	},
 	"console":
 	{
@@ -625,10 +677,13 @@
 	"expanded_folders":
 	[
 		"/C/Users/Andrey/Documents/programing/Snakeee",
-		"/C/Users/Andrey/Documents/programing/Snakeee/py"
+		"/C/Users/Andrey/Documents/programing/Snakeee/py",
+		"/C/Users/Andrey/Documents/programing/Snakeee/venv/Lib",
+		"/C/Users/Andrey/Documents/programing/Snakeee/venv/Lib/site-packages"
 	],
 	"file_history":
 	[
+		"/C/Users/Andrey/Documents/programing/Snakeee/.gitignore",
 		"/C/Users/Andrey/Documents/programing/Snakeee/snakeee.sublime-project",
 		"/C/Users/Andrey/Documents/tyntec/postgres-kafka-sender/postgres-kafka-sender.sublime-project",
 		"/C/Users/Andrey/Documents/programing/beginner-html-site-styled-gh-pages/scripts/my_jquery.js",
@@ -710,6 +765,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"human",
+			"robo",
+			"path[0]",
+			"10",
+			"5, 5",
+			") is not Food",
+			"type(",
+			"..",
+			"grid",
+			"object_at_new_head",
+			"DOWN",
 			"(time() - self.framestart) * self.speed",
 			"framestart",
 			"deltas",
@@ -772,15 +838,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1440,
+						"buffer_size": 1792,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								578,
-								578
+								203,
+								203
 							]
 						],
 						"settings":
@@ -814,6 +880,10 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
 								}
 							],
 							"open_with_edit": true,
@@ -821,7 +891,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 487.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -833,15 +903,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1348,
+						"buffer_size": 2422,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								811,
-								811
+								0,
+								0
 							]
 						],
 						"settings":
@@ -851,6 +921,10 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
 								},
 								{
 									"characters": ".",
@@ -865,7 +939,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -874,56 +948,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 474,
+						"buffer_size": 644,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								228,
-								228
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"open_with_edit": true,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "py/snake.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2811,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1089,
-								1089
+								112,
+								112
 							]
 						],
 						"settings":
@@ -955,20 +988,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "py/graph.py",
+					"buffer": 3,
+					"file": "py/snake.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2237,
+						"buffer_size": 8506,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1539,
-								1539
+								0,
+								0
 							]
 						],
 						"settings":
@@ -997,10 +1030,91 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1087.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								437,
+								437
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "py/graph.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								132
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1039,7 +1153,7 @@
 	"menu_visible": false,
 	"output.exec":
 	{
-		"height": 580.0
+		"height": 665.0
 	},
 	"output.find_results":
 	{

@@ -5,6 +5,7 @@ Implementation of the Food class
 
 from random import randint
 from time import time
+from exceptions import GameOver
 
 
 class Food:
@@ -24,5 +25,5 @@ class Food:
             if not grid.occupied(x, y):
                 return Food(x, y, grid)
             if time() - start > 10:
-                raise Exception("Cannot find a place for a new Food")
+                raise GameOver("Cannot find a place for a new Food")
     Food_eaten = 0

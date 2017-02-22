@@ -7,12 +7,13 @@ from time import time
 from food import Food
 from random import randint
 from copy import deepcopy
+from exceptions import GameOver
 
 
 class Snake:
 
     dead = 0
-    default_speed = 10
+    default_speed = 7
     default_length = 2
 
     UP, DOWN, LEFT, RIGHT = 'UP', 'DOWN', 'LEFT', 'RIGHT'
@@ -25,8 +26,8 @@ class Snake:
 
     def random_snake(grid, color):
         if grid.borders_occupied():
-            raise Exception("GAME OVER: There is no free space at borders "
-                            "to create a new snake")
+            raise GameOver("GAME OVER: There is no free space at borders "
+                           "to create a new snake")
         while True:
             side = [Snake.UP, Snake.DOWN, Snake.LEFT, Snake.RIGHT][
                 randint(0, 3)]

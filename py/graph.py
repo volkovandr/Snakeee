@@ -40,17 +40,18 @@ def draw_grid():
 
 def draw_snake(snake, frame_position):
     snake_color = snake.color if not snake.dead else YELLOW
-    for segment in snake.segments:
-        (x, y, direction) = segment
-        if snake.dead:
-            circle_position = (int(x * grid_size + grid_size / 2),
-                               int(y * grid_size + grid_size / 2))
-        else:
-            circle_position = (
-                int(x * grid_size + grid_size / 2 +
-                    Snake.deltas[direction][0] * (frame_position - 1 ) * grid_size),
-                int(y * grid_size + grid_size / 2 +
-                    Snake.deltas[direction][1] * (frame_position - 1) * grid_size))
+
+    def draw_tail(circle_position, direction, snake_color, segment_radius):
+        pygame.draw.circle(screen, snake_color, circle_position,
+                           int(segment_radius * 0.9), 0)
+        pygame.draw.line(
+            screen, RED,
+            (circle_position[0] - 3 * Snake.deltas[direction][0],
+             circle_position[1] - 3 * Snake.deltas[direction][1]),
+            (circle_position[0] + 3 * Snake.deltas[direction][0],
+             circle_position[1] + 3 * Snake.deltas[direction][1]))
+
+    def draw_segment(circle_position, direction, snake_color, segment_radius):
         pygame.draw.circle(screen, snake_color, circle_position,
                            segment_radius, 0)
         pygame.draw.line(screen, RED,
@@ -59,6 +60,34 @@ def draw_snake(snake, frame_position):
         pygame.draw.line(screen, RED,
                          (circle_position[0], circle_position[1] - 3),
                          (circle_position[0], circle_position[1] + 3))
+
+    def draw_head(circle_position, direction, snake_color, segment_radius):
+        pygame.draw.circle(screen, snake_color, circle_position,
+                           segment_radius, 0)
+
+    segment_no = 0
+    for segment in snake.segments:
+        (x, y, direction) = segment
+        if snake.dead:
+            circle_position = (int(x * grid_size + grid_size / 2),
+                               int(y * grid_size + grid_size / 2))
+        else:
+            circle_position = (
+                int(x * grid_size + grid_size / 2 +
+                    Snake.deltas[direction][0] * (frame_position - 1) *
+                    grid_size),
+                int(y * grid_size + grid_size / 2 +
+                    Snake.deltas[direction][1] * (frame_position - 1) *
+                    grid_size))
+        if segment_no == 0:
+            draw_func = draw_tail
+        elif segment_no == len(snake.segments) - 1:
+            draw_func = draw_head
+        else:
+            draw_func = draw_segment
+        draw_func(circle_position, direction, snake_color, int(
+            segment_radius * (0.75 + 0.25 * segment_no / len(snake.segments))))
+        segment_no += 1
 
 
 def draw_food(food):
