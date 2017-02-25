@@ -32,10 +32,10 @@ class Grid:
         return True
 
     def move(self):
+        self.grid = None
         for obj in self.objects:
             if type(obj) is Snake:
                 obj.move()
-        self.grid = None
 
     def draw(self):
         graph.draw_grid()

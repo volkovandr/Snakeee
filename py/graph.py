@@ -6,13 +6,14 @@ window_height = 800
 window_width = 1400
 
 grid_size = 25
-segment_radius = 20
+segment_radius = 18
+line_thinkess = 3
 
 secreen = None
 
 BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
-LIGHTGREY = (192, 192, 192)
+LIGHTGREY = (142, 142, 192)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 SILVER = (95, 158, 160)
@@ -40,30 +41,52 @@ def draw_grid():
 
 def draw_snake(snake, frame_position):
     snake_color = snake.color if not snake.dead else YELLOW
+    line_len = int(segment_radius / 2.5)
 
     def draw_tail(circle_position, direction, snake_color, segment_radius):
         pygame.draw.circle(screen, snake_color, circle_position,
                            segment_radius, 0)
         pygame.draw.line(
             screen, RED,
-            (circle_position[0] - 3 * Snake.deltas[direction][0],
-             circle_position[1] - 3 * Snake.deltas[direction][1]),
-            (circle_position[0] + 3 * Snake.deltas[direction][0],
-             circle_position[1] + 3 * Snake.deltas[direction][1]))
+            (circle_position[0] - line_len * Snake.deltas[direction][0],
+             circle_position[1] - line_len * Snake.deltas[direction][1]),
+            (circle_position[0] + line_len * Snake.deltas[direction][0],
+             circle_position[1] + line_len * Snake.deltas[direction][1]),
+            line_thinkess)
 
     def draw_segment(circle_position, direction, snake_color, segment_radius):
         pygame.draw.circle(screen, snake_color, circle_position,
                            segment_radius, 0)
         pygame.draw.line(screen, RED,
-                         (circle_position[0] - 3, circle_position[1]),
-                         (circle_position[0] + 3, circle_position[1]))
+                         (circle_position[0] - line_len, circle_position[1]),
+                         (circle_position[0] + line_len, circle_position[1]),
+                         line_thinkess)
         pygame.draw.line(screen, RED,
-                         (circle_position[0], circle_position[1] - 3),
-                         (circle_position[0], circle_position[1] + 3))
+                         (circle_position[0], circle_position[1] - line_len),
+                         (circle_position[0], circle_position[1] + line_len),
+                         line_thinkess)
 
     def draw_head(circle_position, direction, snake_color, segment_radius):
         pygame.draw.circle(screen, snake_color, circle_position,
                            segment_radius, 0)
+        if snake.dead:
+            eyes_fill = 1
+        else:
+            eyes_fill = 0
+            pygame.draw.line(screen, RED, (
+                circle_position[0] + Snake.deltas[direction][0] * segment_radius,
+                circle_position[1] + Snake.deltas[direction][1] * segment_radius), (
+                circle_position[0] + Snake.deltas[direction][0] * (segment_radius + 4),
+                circle_position[1] + Snake.deltas[direction][1] * (segment_radius + 4)))
+        pygame.draw.circle(screen, RED, (
+            int(circle_position[0] + (Snake.deltas[direction][0] + Snake.deltas[direction][1]) * segment_radius / 2),
+            int(circle_position[1] + (Snake.deltas[direction][0] + Snake.deltas[direction][1]) * segment_radius / 2)
+            ), 3, eyes_fill)
+        pygame.draw.circle(screen, RED, (
+            int(circle_position[0] + (Snake.deltas[direction][0] - Snake.deltas[direction][1]) * segment_radius / 2),
+            int(circle_position[1] + (- Snake.deltas[direction][0] + Snake.deltas[direction][1]) * segment_radius / 2)
+            ), 3, eyes_fill)
+
 
     segment_no = 0
     for segment in snake.segments:
